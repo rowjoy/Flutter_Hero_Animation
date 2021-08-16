@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 
-class wel3 extends StatefulWidget {
-  static const String path = "wel3";
-  const wel3({Key key}) : super(key: key);
+class Wellpaper extends StatefulWidget {
+  static const String path = 'Wellpaper';
+  final String image;
+  final String tag;
+  const Wellpaper({this.image, this.tag});
 
   @override
-  _wel3State createState() => _wel3State();
+  _WellpaperState createState() => _WellpaperState();
 }
 
-class _wel3State extends State<wel3> {
+class _WellpaperState extends State<Wellpaper> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,9 +43,8 @@ class _wel3State extends State<wel3> {
               height: 50,
             ),
             Hero(
-                tag: 'wel3',
-                child:
-                    Center(child: Image(image: AssetImage('images/wel3.jpg')))),
+                tag: widget.tag,
+                child: Center(child: Image(image: AssetImage(widget.image)))),
           ],
         ),
       ),
